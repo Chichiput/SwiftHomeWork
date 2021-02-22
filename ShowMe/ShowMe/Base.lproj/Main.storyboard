@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fl5-hs-xqp">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ShowMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rJa-1C-Ym7">
+                                <rect key="frame" x="170" y="232" width="74" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Show me"/>
+                                <connections>
+                                    <segue destination="buh-SN-aQq" kind="show" id="UhV-Oo-XFA"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Введите ваше сообщение" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PV5-Na-bgu">
+                                <rect key="frame" x="20" y="140" width="215" height="21"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleHeadline"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cld-ua-lib">
+                                <rect key="frame" x="20" y="169" width="374" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="PV5-Na-bgu" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="6Z0-Tb-oxF"/>
+                            <constraint firstItem="rJa-1C-Ym7" firstAttribute="top" secondItem="cld-ua-lib" secondAttribute="bottom" constant="29" id="FfV-To-CUT"/>
+                            <constraint firstItem="PV5-Na-bgu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="52" id="Fh0-B7-fM6"/>
+                            <constraint firstItem="cld-ua-lib" firstAttribute="top" secondItem="PV5-Na-bgu" secondAttribute="bottom" constant="8" id="aU7-fN-qXP"/>
+                            <constraint firstItem="cld-ua-lib" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="bAt-ee-8Pm"/>
+                            <constraint firstItem="PV5-Na-bgu" firstAttribute="leading" secondItem="cld-ua-lib" secondAttribute="leading" id="bE0-AE-zLh"/>
+                            <constraint firstItem="rJa-1C-Ym7" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vZD-eu-e0z"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="YLd-m0-6CA"/>
+                    <connections>
+                        <outlet property="textField" destination="cld-ua-lib" id="cgs-AK-Cy6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="952.17391304347836" y="93.75"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="lrR-Pa-U0H">
+            <objects>
+                <viewController id="buh-SN-aQq" customClass="MessageViewController" customModule="ShowMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lLf-O0-K3J">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вы сказил..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6D-Ox-IuA">
+                                <rect key="frame" x="39" y="112" width="96" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MdF-r8-83P">
+                                <rect key="frame" x="39" y="141" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MAn-hG-kXl"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="E6D-Ox-IuA" firstAttribute="leading" secondItem="MAn-hG-kXl" secondAttribute="leading" constant="39" id="8I7-AV-UVV"/>
+                            <constraint firstItem="E6D-Ox-IuA" firstAttribute="leading" secondItem="MdF-r8-83P" secondAttribute="leading" id="XlO-KS-BPK"/>
+                            <constraint firstItem="E6D-Ox-IuA" firstAttribute="top" secondItem="MAn-hG-kXl" secondAttribute="top" constant="24" id="c66-Zt-qkm"/>
+                            <constraint firstItem="MdF-r8-83P" firstAttribute="top" secondItem="E6D-Ox-IuA" secondAttribute="bottom" constant="8" id="fbp-Ne-Bsb"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="vMY-a2-4je"/>
+                    <connections>
+                        <outlet property="lable" destination="MdF-r8-83P" id="1aq-xQ-OKn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bnb-ak-WJY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1652.1739130434785" y="93.75"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ZZ1-WV-xjv">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fl5-hs-xqp" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="e4r-tq-jNp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="q5A-DJ-OzM"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="84U-5x-rcC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="42.028985507246382" y="93.75"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
